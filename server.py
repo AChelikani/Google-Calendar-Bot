@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, Response
 import config
-from slackclient
+from slackclient import SlackClient
 
 
 
