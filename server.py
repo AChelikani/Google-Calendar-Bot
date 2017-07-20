@@ -17,6 +17,7 @@ def test():
 
 @app.route("/event-action", methods=['GET', 'POST'])
 def action():
+	print 'hi advith ty 4 reacting'
 	params = request.get_json()
 	if params['type'] == 'url_verification':
 		token, ch = params['token'], params['challenge']
@@ -59,7 +60,6 @@ def action():
 							  }
 							}
 		payload = {'token': token, 'channel': channel, 'ts': ts, 'unfurls': json.dumps(unfurls)}
-		print 'doing unfurl for', unfurl_url
 		r = requests.post(url, data=payload)
 		return str(r.status_code)
 
