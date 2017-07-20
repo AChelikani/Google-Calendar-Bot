@@ -103,3 +103,7 @@ ENV/
 # vim
 .swo
 .swp
+
+#
+*.pyc
+config.py
